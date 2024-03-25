@@ -1,0 +1,23 @@
+{
+  "name": "net-device-catalog",
+  "version": "1.0.0",
+  "description": "Catalog using a new API to keep inventory of our product.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FriedrichLexA99/net-device-catalog.git"
+  },
+  "author": "Alex Friedrichsen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FriedrichLexA99/net-device-catalog/issues"
+  },
+  "homepage": "https://github.com/FriedrichLexA99/net-device-catalog#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.1"
+  }
+}
