@@ -1,4 +1,8 @@
 # net-device-catalog
+This project in currently under improvement. All notes so far have been made for self direction for vision of the project
+and education between myself and the CTO that I'm collaborating with this on. 
+
+
 Catalog using a new API to keep inventory of our product.
 Initialize to be a Node.js project. Explore node commands to run and complete project.
 Need to initialize JSON package since we are using Node.js.
