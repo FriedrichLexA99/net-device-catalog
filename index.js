@@ -20,24 +20,28 @@ http verbs: part of the http standard --> "Get", "Head", "Post", "Put", "Delete"
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const expressOasGenerator = require('express-oas-generator');
+expressOasGenerator.handleResponses(app,{});
 const port = 3000;
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => {
+app.get("/", (req, res, next) => {
     res.json({
         message: "Hello World"
     });
     //res.send("Hello World");
+    next();
 });
 
-app.get("/path1", (req, res) => {
+app.get("/path1", (req, res, next) => {
     res.json({
         message: "Hello World from Path 1"
     });
     //res.send("Hello World");
+    next();
 });
 
-app.get("/path1/:pathVar1", (req, res) => {
+app.get("/path1/:pathVar1", (req, res, next) => {
 
     const { pathVar1 } = req.params; //object deconstructor -> inside the curly bracecs, each field is mapped to it's corresponding variable name (variable name is the same as the field)
     
@@ -46,11 +50,24 @@ app.get("/path1/:pathVar1", (req, res) => {
         message: `Hello ${pathVar1}`
     });
     //res.send("Hello World");
+    next();
 });
 
+app.get("/inventory", (req, res, next) => {
+    
+    let inventoryCollection = [];
+    res.json(inventoryCollection);
+    next();
+});
+
+app.post("/inventory", (req, res, next) => {
+    console.log(req.body);
+    res.json(req.body);
+    next();
+});
+
+
+expressOasGenerator.handleRequests();
 app.listen(port, () => {
     console.log(`Net Device Api has started on http://localhost:${port}`);
-})
-
-
-
+});

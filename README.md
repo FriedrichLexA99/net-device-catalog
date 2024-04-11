@@ -16,4 +16,26 @@ Three big things making AWS what it is.
    One issue with these is that sometimes they'll go into "hibernation". Once reawakened, it needs some time to get back to full 
    speed. This time does get billed along with it's first command/function.
 
-3. What we are using is "Express JS", one of the most popular API frameworks in java ecosystem. 
+3. What we are using is "Express JS", one of the most popular API frameworks in java ecosystem.
+
+
+---
+04/10/24
+
+1.  REST APIs are a structured pattern that links functions to resources.  The resources are modeled as URI paths, and the functions are modeled as HTTP Verbs (Since REST APIs interact using the HTTP Protocol)
+2.  Resources are Hierarchical, with a general pattern of domain/entity/{specificier}
+3.  Verbs logically represent transactions, with the main transctions providing CRUD functionality (Create, retrieve, Update, Delete)
+
+GET /inventory
+POST /inventory
+
+GET /inventory/{inventoryId}
+PUT /inventory/{inventoryId}
+DELETE /inventory/{inventoryId}
+
+Next time on DBZ:
+
+- We will do business logic inside modules and show how the interact with server storage. 
+- Persist state between API calls
+- Show 2 types of DBs. Real-time DB, and relational DB and show pros/cons of each.
+- Show how module & API have indirection between them.
