@@ -39,3 +39,14 @@ Next time on DBZ:
 - Persist state between API calls
 - Show 2 types of DBs. Real-time DB, and relational DB and show pros/cons of each.
 - Show how module & API have indirection between them.
+
+Vision-casting:
+   Would like to implement K8s into this. Possibly get AWS free devleoper account or Google CP equivalent. 
+   Once account is made, could store website on S3 bucket? Maybe using straight up docker orchestration with a bunch of 
+   dumb jenkins and react.js stuff would be more fitting though. I want to be able to use containers in this somehow.
+   Not sure if the relational DBs can be held inside of a pod. I got a certification related to Red Hat's Openshift using Podman
+   so it would be cool to use.
+
+Notes:
+   OOP like Python has objects, classes, and then methods (which are just functions of the class)
+   Functional programming (like javascript) uses modules that are combinations of variables and functions.
