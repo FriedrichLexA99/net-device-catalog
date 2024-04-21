@@ -84,6 +84,14 @@ app.get("/inventory/:inventoryId", (req, res, next) => {
     next();
 });
 
+app.get("/inventory_creds", (req, res, next) => {
+    const { secret_user } = req.params;
+    let results = retrieve(secret_user, req.body);
+    console.log("retrieve password from user", secret_user, results);
+    res.json(results);
+    next();
+})
+
 app.put("/inventory/:inventoryId", (req, res, next) => {
     console.log(req.body);
     const { inventoryId } = req.params;

@@ -1,7 +1,8 @@
 const inventoryCollection = [
-    { "id": 3, "name":"Hammer", "price": 18.97, "cost": 6.96}
+    { "id": 3, "name":"Hammer", "price": 18.97, "cost": 6.96}, 
+    { "id": 5, "name":"Variety Wrench Pack", "price": 44.82, "cost": 15.00}
 ];
-
+/* The cost shown in postman truncates the number due to trailing 0s. How to fix??*/
 export const search = (id, query) => {
 
     if (id !== null) {
